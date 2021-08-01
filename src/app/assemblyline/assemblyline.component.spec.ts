@@ -111,12 +111,12 @@ describe("AssemblyLineComponent", () => {
         beforeEach(() => {
           expect(addElem).not.toBeNull();
           addElem.triggerEventHandler("keydown.enter", {});
-          fixture.detectChanges();
+fixture.detectChanges();
         });
 
         it('should respond to Enter keydown, clearing the input on "assembly-add-item"', () => {
           expect(addElem).not.toBeNull();
-          expect(addElem.nativeElement.value).toEqual("");
+          expect(addElem.componentInstance.inputAddItem).toEqual("");
         });
 
         it('should have a single item in the first stage after Enter on "assembly-add-item"', () => {

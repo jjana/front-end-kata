@@ -1,1 +1,23 @@
-TODO -- src/app/assemblyline/assemblyline.component.html
+<div class="add-item">
+Add an item: <input [(ngModel)]="inputAddItem" data-test="assembly-add-item"  (keydown.enter)="addItem($event)"/>
+<div class="stages ">
+  <div class="stage-item" data-test="assembly-stage" >
+    {{stages[0]}}
+         <button class="btn-idea" *ngFor="let item of stageMultiArray[0]; let i = index;" (click)="changeStage(i,0)" (contextmenu)="onRightClick(i,0)" data-test="assembly-item">{{item}}</button>
+  </div>
+ <div class="stage-item" data-test="assembly-stage" >
+  {{stages[1]}}
+        <button class="btn-idea" *ngFor="let item of stageMultiArray[1]; let i = index;" (click)="changeStage(i,1)" (contextmenu)="onRightClick(i,1)" data-test="assembly-item">{{item}}</button>
+  </div>
+   <div class="stage-item"  data-test="assembly-stage">
+     {{stages[3]}}
+        <button class="btn-idea" *ngFor="let item of stageMultiArray[2]; let i = index;" (click)="changeStage(i,2)" (contextmenu)="onRightClick(i,2)" data-test="assembly-item">{{item}}</button>
+  </div>
+   <div class="stage-item"  data-test="assembly-stage">
+    {{stages[3]}}
+        <button class="btn-idea" *ngFor="let item of stageMultiArray[3]; let i = index;" (click)="changeStage(i,3)" (contextmenu)="onRightClick(i,3)" data-test="assembly-item">{{item}}</button>
+  </div>
+
+</div>
+
+</div>
